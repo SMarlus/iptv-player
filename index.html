@@ -345,7 +345,10 @@
                     currentActive.classList.remove('active');
                 }
                 nextChannel.classList.add('active');
-                nextChannel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                nextChannel.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
             } else if (event.key === 'ArrowUp') {
                 event.preventDefault(); // Prevent page scrolling
                 var prevIndex = (currentIndex - 1 + visibleChannels.length) % visibleChannels.length;
@@ -355,7 +358,10 @@
                     currentActive.classList.remove('active');
                 }
                 prevChannel.classList.add('active');
-                prevChannel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                prevChannel.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
             } else if (event.key === 'Enter') {
                 if (currentActive) {
                     event.preventDefault(); // Prevent default Enter key behavior (e.g., form submission)
